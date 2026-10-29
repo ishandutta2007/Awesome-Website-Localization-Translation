@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        fill: #94a3b8;
+      }
+      .badge-label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+      .lang-code {
+        font-family: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      
+      /* Subtle pulse & wave animations */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.05); }
+      }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(7px); }
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -40; }
+      }
+
+      .pulse-circle1 {
+        animation: pulseGlow 6s ease-in-out infinite;
+        transform-origin: 200px 180px;
+      }
+      .pulse-circle2 {
+        animation: pulseGlow 8s ease-in-out infinite alternate;
+        transform-origin: 1000px 180px;
+      }
+      .floating-group1 {
+        animation: floatSlow1 5s ease-in-out infinite;
+      }
+      .floating-group2 {
+        animation: floatSlow2 6s ease-in-out infinite;
+      }
+      .flow-path {
+        stroke-dasharray: 8, 8;
+        animation: dashMove 3s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Animated Glow Orbs in Background -->
+  <circle cx="200" cy="180" r="160" fill="#3b82f6" opacity="0.15" filter="url(#glow)" class="pulse-circle1" />
+  <circle cx="1000" cy="180" r="150" fill="#8b5cf6" opacity="0.15" filter="url(#glow)" class="pulse-circle2" />
+  <circle cx="600" cy="60" r="100" fill="#06b6d4" opacity="0.1" filter="url(#glow)" />
+
+  <!-- Decorative Grid / Nodes in Background -->
+  <g opacity="0.15">
+    <circle cx="100" cy="70" r="2" fill="#94a3b8" />
+    <circle cx="250" cy="50" r="2" fill="#94a3b8" />
+    <circle cx="950" cy="70" r="2" fill="#94a3b8" />
+    <circle cx="1100" cy="90" r="2" fill="#94a3b8" />
+    <circle cx="150" cy="300" r="2" fill="#94a3b8" />
+    <circle cx="1050" cy="290" r="2" fill="#94a3b8" />
+    <line x1="100" y1="70" x2="250" y2="50" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="950" y1="70" x2="1100" y2="90" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Dynamic Translation Flow Line at Bottom -->
+  <g opacity="0.6">
+    <path d="M 150 295 C 400 270, 800 320, 1050 295" fill="none" stroke="url(#flowGrad)" stroke-width="2.5" class="flow-path" />
+  </g>
+
+  <!-- Floating Feature Badges (Background/Sides - non-interfering) -->
+  <g class="floating-group1">
+    <!-- Left Pill: i18n & l10n -->
+    <rect x="80" y="80" width="140" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+    <circle cx="100" cy="99" r="6" fill="#38bdf8" />
+    <text x="116" y="104" class="badge-label">🌐 i18n / l10n</text>
+
+    <!-- Bottom Left Pill: TMS -->
+    <rect x="120" y="215" width="160" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+    <circle cx="140" cy="234" r="6" fill="#818cf8" />
+    <text x="156" y="239" class="badge-label">⚡ Real-time TMS</text>
+  </g>
+
+  <g class="floating-group2">
+    <!-- Right Pill: AI Translation -->
+    <rect x="970" y="85" width="150" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+    <circle cx="990" cy="104" r="6" fill="#c084fc" />
+    <text x="1006" y="109" class="badge-label">🤖 AI Multilingual</text>
+
+    <!-- Bottom Right Pill: CI/CD Localization -->
+    <rect x="930" y="215" width="170" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+    <circle cx="950" cy="234" r="6" fill="#34d399" />
+    <text x="966" y="239" class="badge-label">🔄 Continuous CI/CD</text>
+  </g>
+
+  <!-- Central Foreground Content (Title, Subtitle & Interactive Tech Hub) -->
+  <!-- Header Tag -->
+  <g transform="translate(600, 75)">
+    <rect x="-135" y="-16" width="270" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <text x="0" y="5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.5">CURATED AWESOME ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="140" text-anchor="middle" fill="url(#titleGrad)" class="title-text">
+    Awesome Website Localization
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="180" text-anchor="middle" class="subtitle-text">
+    Top SaaS Platforms &amp; Open-Source Translation Management Systems
+  </text>
+
+  <!-- Feature Cards / Language Nodes (Foreground Center-Bottom) -->
+  <g transform="translate(600, 250)">
+    <!-- Card 1: Multi-language -->
+    <g transform="translate(-240, 0)">
+      <rect x="-95" y="-28" width="190" height="56" rx="12" fill="url(#cardGrad1)" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.2" />
+      <text x="-65" y="6" font-size="20">🌍</text>
+      <text x="-35" y="-2" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Global Reach</text>
+      <text x="-35" y="16" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Multi-Locale SEO</text>
+    </g>
+
+    <!-- Card 2: AI & Automation -->
+    <g transform="translate(0, 0)">
+      <rect x="-105" y="-28" width="210" height="56" rx="12" fill="url(#cardGrad2)" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.2" />
+      <text x="-75" y="6" font-size="20">🧠</text>
+      <text x="-45" y="-2" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">AI &amp; Neural MT</text>
+      <text x="-45" y="16" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">LLM Quality Scoring</text>
+    </g>
+
+    <!-- Card 3: Developer Workflows -->
+    <g transform="translate(240, 0)">
+      <rect x="-95" y="-28" width="190" height="56" rx="12" fill="url(#cardGrad3)" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.2" />
+      <text x="-65" y="6" font-size="20">🛠️</text>
+      <text x="-35" y="-2" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Developer First</text>
+      <text x="-35" y="16" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#94a3b8">Git &amp; API Pipelines</text>
+    </g>
+  </g>
+
+  <!-- Border Frame -->
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="15.5" fill="none" stroke="#334155" stroke-opacity="0.6" stroke-width="1" />
+</svg>
