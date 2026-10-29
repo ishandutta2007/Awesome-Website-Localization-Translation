@@ -30,6 +30,7 @@ A meticulously curated list of **Website Localization (l10n)**, **Internationali
 - [💻 Open-Source GitHub Projects](#-open-source-github-projects)
 - [🛠️ Frameworks & Architecture Guidelines](#️-frameworks--architecture-guidelines)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [⭐ Star History](#-star-history)
 - [📜 Disclaimer](#-disclaimer)
 
@@ -111,6 +112,17 @@ Contributions are warmly welcomed! Help expand this ecosystem by submitting high
 3. 📝 Update `README.md` following the tabular format and sorting criteria.
 4. 🔍 Ensure descriptions are factual, links resolve to official sources, and pricing/star data is verified.
 5. 🚀 Submit a **Pull Request** with a concise description of your additions.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using this curated ecosystem! If you find this repository valuable for your projects, architecture planning, or research, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it across GitHub.
+- 🍴 **Fork and contribute** to keep entries fresh and comprehensive.
+- 📢 **Share with colleagues & peers** building multilingual web apps and global ecommerce storefronts.
+- ☕ **Buy a coffee / Sponsor**: If you'd like to support ongoing curation and open-source maintenance, please consider backing via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007). Your support is deeply appreciated!
 
 ---
 
